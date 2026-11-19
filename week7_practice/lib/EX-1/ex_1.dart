@@ -4,7 +4,8 @@ void main() => runApp(
   MaterialApp(
     home: Scaffold(
       appBar: AppBar(title: const Text("Custom buttons")),
-      body: Center(child: SelectableButton()),
+      body: Center(
+        child: SelectableButton()),
     ),
   ),
 );
@@ -51,14 +52,17 @@ class _SelectableButtonState extends State<SelectableButton> {
       width: 400,
       height: 100,
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: backGround,
+        ),
         onPressed: () => {
           setState (() {
             isSelected = !isSelected;
           })
         },
-        child: Text(
+        child: Center(child: Text(
           isSelected ? 'Selected' : 'isSelected'
-        ),
+        )),
       ),
     );
   }
