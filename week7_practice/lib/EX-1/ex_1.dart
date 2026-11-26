@@ -61,7 +61,7 @@ class _SelectableButtonState extends State<SelectableButton> {
           })
         },
         child: Center(child: Text(
-          isSelected ? 'Selected' : 'isSelected'
+          isSelected ? 'Selected' : 'Not Selected'
         )),
       ),
     );
